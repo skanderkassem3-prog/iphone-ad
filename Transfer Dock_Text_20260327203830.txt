@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone 3D Experience</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- فيديو الخلفية -->
+<video autoplay muted loop class="video-bg">
+    <source src="assets/background.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<section class="section">
+    <h1 class="fade">iPhone 15 Pro</h1>
+    <p class="fade">Titanium. So light. So strong.</p>
+</section>
+
+<section class="section">
+    <div class="iphone-container">
+        <img src="assets/iphone.png" class="iphone" id="iphone">
+    </div>
+    <p class="fade">A17 Pro Chip. Game‑changing power.</p>
+</section>
+
+<section class="section">
+    <h1 class="fade">Experience the Future</h1>
+    <a href="#" class="btn">Buy Now</a>
+</section>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+const iphone = document.getElementById('iphone');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100) el.classList.add('show');
+    });
+});
+
+document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth/2 - e.pageX)/20;
+    const y = (window.innerHeight/2 - e.pageY)/20;
+    iphone.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# iPhone 3D Experience
+
+Publicité 3D interactive pour iPhone comme sur Apple.
+
+## Publish
+1. Push repository to GitHub
+2. Settings ➤ Pages
+3. Choose branch `main`
+4. Save → Your site will be online
+
+Enjoy! 🚀
